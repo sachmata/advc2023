@@ -1,8 +1,12 @@
 import { fromFile } from '../lib/read-lines.mjs';
 
-console.log('Day 02');
+import { argv } from 'node:process';
 
-// https://adventofcode.com/2022/day/XX/input
+const FILE_NAME = argv[2] === '-e' ? 'example' : 'input';
+
+console.log(`Day 2 (${FILE_NAME})`);
+
+// https://adventofcode.com/2023/day/2/input
 
 const MAX_RED = 12;
 const MAX_GREEN = 13;
@@ -11,7 +15,7 @@ const MAX_BLUE = 14;
 let sum = 0;
 let powerSum = 0;
 
-for (let line of fromFile('./day02/input.txt')) {
+for (let line of fromFile(`./day02/${FILE_NAME}.txt`)) {
     if (!line.length) {
         continue;
     }

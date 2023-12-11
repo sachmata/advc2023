@@ -1,14 +1,18 @@
 import { fromFile } from '../lib/read-lines.mjs';
 
-console.log('Day 01');
+import { argv } from 'node:process';
 
-// https://adventofcode.com/2023/day/01/input
+const FILE_NAME = argv[2] === '-e' ? 'example' : 'input';
+
+console.log(`Day 1 (${FILE_NAME})`);
+
+// https://adventofcode.com/2023/day/1/input
 
 let sum = 0;
 
 const spelled = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
 
-for (let line of fromFile('./day01/input.txt')) {
+for (let line of fromFile(`./day01/${FILE_NAME}.txt`)) {
     if (!line.length) {
         continue;
     }

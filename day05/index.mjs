@@ -1,8 +1,12 @@
 import { fromFile } from '../lib/read-lines.mjs';
 
-console.log('Day 05');
+import { argv } from 'node:process';
 
-// https://adventofcode.com/2022/day/05/input
+const FILE_NAME = argv[2] === '-e' ? 'example' : 'input';
+
+console.log(`Day 5 (${FILE_NAME})`);
+
+// https://adventofcode.com/2023/day/5/input
 
 // seeds: 79 14 55 13
 
@@ -49,7 +53,7 @@ const humidity2location = [];
 
 let mappers;
 
-for (let line of fromFile('./day05/input.txt')) {
+for (let line of fromFile(`./day05/${FILE_NAME}.txt`)) {
     if (!line.length) {
         continue;
     }

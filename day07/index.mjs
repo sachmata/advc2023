@@ -4,9 +4,9 @@ import { argv } from 'node:process';
 
 const FILE_NAME = argv[2] === '-e' ? 'example' : 'input';
 
-console.log(`Day 07 (${FILE_NAME})`);
+console.log(`Day 7 (${FILE_NAME})`);
 
-// https://adventofcode.com/2022/day/07/input
+// https://adventofcode.com/2023/day/7/input
 
 // 5ofKind, 1 group, 5 max
 // 4ofKind, 2 groups, 4 max (4 + 1)

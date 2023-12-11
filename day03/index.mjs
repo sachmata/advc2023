@@ -1,12 +1,16 @@
 import { fromFile } from '../lib/read-lines.mjs';
 
-console.log('Day 03');
+import { argv } from 'node:process';
 
-// https://adventofcode.com/2022/day/XX/input
+const FILE_NAME = argv[2] === '-e' ? 'example' : 'input';
+
+console.log(`Day 3 (${FILE_NAME})`);
+
+// https://adventofcode.com/2023/day/3/input
 
 const data = [];
 
-for (let line of fromFile('./day03/input.txt')) {
+for (let line of fromFile(`./day03/${FILE_NAME}.txt`)) {
     if (!line.length) {
         continue;
     }
