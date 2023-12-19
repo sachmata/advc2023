@@ -65,7 +65,8 @@ function findMirrorLines(data) {
             }
 
             if (cA === 0 || cB === data.length - 1) {
-                if (err < ERR) { // exactly one smudge
+                // exactly one smudge
+                if (err < ERR) {
                     break;
                 }
 
