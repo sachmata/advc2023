@@ -1,3 +1,4 @@
+import lcm from '../lib/lcm.mjs';
 import { fromFile } from '../lib/read-lines.mjs';
 
 import { argv } from 'node:process';
@@ -82,12 +83,6 @@ for (let ci = 0; ci < currents.length; ci++) {
         }
     }
 }
-
-const lcm = (...arr) => {
-    const gcd = (x, y) => (!y ? x : gcd(y, x % y));
-    const _lcm = (x, y) => (x * y) / gcd(x, y);
-    return [...arr].reduce((a, b) => _lcm(a, b));
-};
 
 const totalSteps = lcm(...counters);
 console.log(totalSteps);
